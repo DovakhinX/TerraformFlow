@@ -27,4 +27,5 @@ resource "azurerm_storage_blob" "index" {
   type = "Block"
   source = "index.html"
   content_type = "text/html"
+  content_md5 = filemd5("index.html")
 }
